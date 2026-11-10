@@ -3,16 +3,21 @@
 
 /* ---------- 1. Tokens ---------- */
 :root {
-  /* palette: warm cream, espresso, muted sage, ember accent */
-  --cream: #fbf8f2;
-  --paper: #fffdf9;
-  --espresso: #2a211b;
-  --sage-soft: #e5e9dd;
-  --sage: #56634b;
-  --ember: #a8492a;
+  /* house palette (СМ-04): page, surface, alternate, text, accent */
+  --cream: #fcfcfc;
+  --paper: #ffffff;
+  --alt-bg: #f7f8f9;
+  --espresso: #05080b;
+  --sage-soft: #d6efff;
+  --sage: #006acf;
+  --ember: #006acf;
+  --focus: #0086dd;
+  --tray: rgba(5, 8, 11, .035);
+  --header-bg: rgba(255, 255, 255, .72);
+  --overlay-bg: rgba(252, 252, 252, .92);
   /* type */
-  --serif: "Bodoni Moda", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
-  --sans: "Plus Jakarta Sans", "Segoe UI", system-ui, sans-serif;
+  --serif: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --fs-h1: clamp(38px, 6vw, 82px);
   --fs-h2: clamp(34px, 4.4vw, 58px);
   --fs-h3: clamp(21px, 2.2vw, 28px);
@@ -31,7 +36,7 @@
   --bezel: 7px;
   --r-pill: 999px;
   /* diffused ambient shadow, no harsh drop shadows */
-  --shadow: 0 30px 60px -30px rgba(74, 52, 36, .22), 0 12px 24px -18px rgba(74, 52, 36, .14);
+  --shadow: 0 30px 60px -30px rgba(5, 8, 11, .18), 0 12px 24px -18px rgba(5, 8, 11, .12);
   --inset: inset 0 1px 1px rgba(255, 255, 255, .9);
   /* spring motion */
   --spring: cubic-bezier(.32, .72, 0, 1);
@@ -40,13 +45,13 @@
 /* context tokens: light surface (page and every card core) … */
 :root, .core {
   --text: var(--espresso);
-  --muted: #5e5248;
-  --line: rgba(42, 33, 27, .08);
+  --muted: #5c646f;
+  --line: #dfe1e5;
   --chip: var(--paper);
   --accent: var(--ember);
-  --btn-bg: var(--espresso);
-  --btn-fg: var(--cream);
-  --knob: rgba(251, 248, 242, .14);
+  --btn-bg: var(--ember);
+  --btn-fg: #ffffff;
+  --knob: rgba(255, 255, 255, .16);
 }
 @media (max-width: 767px) {
   :root { --sec: 80px; --gutter: 16px; --gap-l: 36px; --fs-body: 16px; --pad: 24px; }
@@ -71,7 +76,8 @@ p { margin: 0; color: var(--muted); }
 em { font-style: italic; color: var(--accent); }
 a { color: inherit; text-underline-offset: 4px; }
 small { display: block; font-size: var(--fs-small); color: var(--muted); }
-:focus-visible { outline: 2px solid var(--ember); outline-offset: 3px; }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 3px; }
+footer a { color: var(--accent); }
 dl { margin: 0; width: 100%; font-size: var(--fs-small); }
 dl div { display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; box-shadow: 0 1px 0 var(--line); }
 dt { color: var(--muted); }
@@ -83,8 +89,8 @@ label {
 select {
   display: block; width: 100%; min-width: 0; margin-top: 14px; padding: 14px 44px 14px 18px;
   border: 0; border-radius: 16px; appearance: none; cursor: pointer;
-  background: var(--cream) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 14 14' fill='none' stroke='%232a211b' stroke-width='1.2'><path d='M3 5.5l4 4 4-4'/></svg>") no-repeat right 18px center;
-  box-shadow: 0 0 0 6px rgba(42, 33, 27, .035), 0 0 0 7px var(--line); /* double bezel */
+  background: var(--cream) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 14 14' fill='none' stroke='%2305080b' stroke-width='1.2'><path d='M3 5.5l4 4 4-4'/></svg>") no-repeat right 18px center;
+  box-shadow: 0 0 0 6px var(--tray), 0 0 0 7px var(--line); /* double bezel */
   font: 500 20px/1.3 var(--serif); color: var(--text); letter-spacing: 0; text-transform: none;
 }
 
@@ -102,7 +108,7 @@ main > section > .shell { display: grid; gap: var(--gap-l); }
 
 /* ---------- 4. Components ---------- */
 /* double bezel: outer tray + inner core */
-.bezel { padding: var(--bezel); border-radius: var(--r-outer); background: rgba(42, 33, 27, .035); box-shadow: 0 0 0 1px var(--line); }
+.bezel { padding: var(--bezel); border-radius: var(--r-outer); background: var(--tray); box-shadow: 0 0 0 1px var(--line); }
 .core {
   height: 100%; padding: var(--pad); border-radius: calc(var(--r-outer) - var(--bezel));
   background: var(--paper); color: var(--text); box-shadow: var(--inset), var(--shadow);
@@ -126,27 +132,22 @@ main > section > .shell { display: grid; gap: var(--gap-l); }
   display: inline-flex; align-items: center; gap: 14px; padding: 8px 8px 8px 26px;
   border: 0; border-radius: var(--r-pill); background: var(--btn-bg); color: var(--btn-fg);
   font: 600 15.5px/1 var(--sans); text-decoration: none;
-  box-shadow: 0 14px 30px -16px rgba(42, 33, 27, .55), inset 0 1px 0 rgba(255, 255, 255, .12);
+  box-shadow: 0 14px 30px -16px rgba(5, 8, 11, .35), inset 0 1px 0 rgba(255, 255, 255, .12);
   transition: transform var(--t) var(--spring);
 }
 .knob { width: 40px; height: 40px; display: grid; place-items: center; border-radius: 50%; background: var(--knob); transition: transform var(--t) var(--spring), background-color var(--t) var(--spring), color var(--t) var(--spring); }
-.pill:hover .knob { transform: translate(3px, -1px) scale(1.06); background: var(--ember); color: var(--cream); }
+.pill:hover .knob { transform: translate(3px, -1px) scale(1.06); background: var(--btn-fg); color: var(--btn-bg); }
 .pill:active { transform: scale(.98); }
 /* surface modifiers — after the components so they win */
-.tint { background: var(--sage-soft); color: #3f4a36; }
-.dark {
-  --text: var(--cream); --muted: rgba(251, 248, 242, .76); --line: rgba(251, 248, 242, .12);
-  --chip: rgba(251, 248, 242, .08); --accent: #e6a07f;
-  --btn-bg: var(--cream); --btn-fg: var(--espresso); --knob: rgba(42, 33, 27, .08);
-  background: var(--espresso); color: var(--text);
-}
+.tint { background: var(--sage-soft); color: var(--espresso); }
+.alt { background: var(--alt-bg); color: var(--text); }
 
 /* ---------- 5. Header: floating glass island ---------- */
 header.island {
   position: fixed; top: 20px; left: 50%; z-index: 30; transform: translateX(-50%);
   display: flex; align-items: center; gap: 28px; width: max-content; max-width: calc(100% - 32px); min-height: 0;
   padding: 8px 8px 8px 22px; border: 0; border-radius: var(--r-pill);
-  background: rgba(255, 253, 249, .72); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
+  background: var(--header-bg); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
   box-shadow: 0 0 0 1px var(--line), var(--shadow);
 }
 .island nav { display: flex; align-items: center; gap: 4px; }
@@ -157,7 +158,7 @@ header.island {
 .island nav a:hover { background: var(--line); color: var(--text); }
 .island nav a:last-child { background: var(--btn-bg); color: var(--btn-fg); }
 .island input { position: absolute; width: 1px; height: 1px; margin: 0; opacity: 0; pointer-events: none; }
-.island input:focus-visible + label { outline: 2px solid var(--ember); outline-offset: 3px; }
+.island input:focus-visible + label { outline: 2px solid var(--focus); outline-offset: 3px; }
 .island label { display: none; }
 
 /* ---------- 6. Hero: editorial split + z-axis cascade (drawn visual) ---------- */
@@ -195,9 +196,9 @@ footer { margin: 0; padding: 72px 0 64px; border: 0; }
   header.island { top: 12px; left: 16px; right: 16px; transform: none; width: auto; max-width: none; justify-content: space-between; padding: 6px 6px 6px 16px; }
   .island label {
     position: relative; z-index: 2; display: grid; place-items: center; width: 44px; height: 44px;
-    border-radius: 50%; background: var(--espresso); cursor: pointer;
+    border-radius: 50%; background: var(--btn-bg); cursor: pointer;
   }
-  .island label span { position: absolute; left: 14px; width: 16px; height: 1.5px; background: var(--cream); transition: transform var(--t) var(--spring); }
+  .island label span { position: absolute; left: 14px; width: 16px; height: 1.5px; background: var(--btn-fg); transition: transform var(--t) var(--spring); }
   .island label span:first-child { transform: translateY(-3px); }
   .island label span:last-child { transform: translateY(3px); }
   .menu-open .island label span:first-child { transform: rotate(45deg); }
@@ -206,7 +207,7 @@ footer { margin: 0; padding: 72px 0 64px; border: 0; }
   /* full-screen glass overlay; the island drops its own blur so it does not trap the fixed overlay */
   .island nav {
     position: fixed; inset: 0; z-index: 1; flex-direction: column; align-items: flex-start; justify-content: center;
-    gap: 6px; padding: 96px 24px 48px; background: rgba(251, 248, 242, .86);
+    gap: 6px; padding: 96px 24px 48px; background: var(--overlay-bg);
     backdrop-filter: blur(28px); -webkit-backdrop-filter: blur(28px);
     opacity: 0; visibility: hidden; transition: opacity var(--t) var(--spring), visibility 0s var(--t);
   }
