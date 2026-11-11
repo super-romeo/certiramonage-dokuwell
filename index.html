@@ -15,6 +15,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta name="description" content="Pour ramoneurs : le certificat de ramonage rempli sur le téléphone, avec les mentions du décret 2023-641, signé et envoyé en PDF au client.">
 <link rel="icon" href="favicon.svg">
 <link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="variant.css">
 <script src="smoke.js" defer></script>
 <!-- faq-jsonld:start -->
 <script type="application/ld+json">
@@ -73,74 +77,233 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
-<header><div class="wrap">
-  <div class="logo"><a href="index.html" data-ev="click_logo_home">Certificat Ramonage</a></div>
-  <nav class="top"><a href="#quoi" data-ev="click_nav_quoi">Ce que vous obtenez</a><a href="price.html" data-ev="click_nav_prix">Prix</a><a href="#exemple" data-ev="click_nav_exemple">Exemple</a><a href="#start" data-ev="click_nav_start">Commencer</a></nav>
+<header><div class="shell">
+  <a class="home" href="index.html" data-ev="click_logo_home">Certificat Ramonage</a>
+  <nav aria-label="Navigation"><a href="#quoi" data-ev="click_nav_quoi">Ce que vous obtenez</a><a href="price.html" data-ev="click_nav_prix">Prix</a><a href="#exemple" data-ev="click_nav_exemple">Exemple</a><a href="#start" data-ev="click_nav_start">Commencer</a></nav>
 </div></header>
 
-<div class="wrap">
-  <div class="hero">
-    <h1>Le certificat de ramonage rempli sur place, signé et envoyé au client avant de partir</h1>
-    <p class="sub">Pour ramoneurs indépendants et petites entreprises de fumisterie : l'appareil, le conduit, l'état constaté et les observations sont saisis sur le téléphone pendant l'intervention, le client signe à l'écran et reçoit son certificat en PDF par e-mail.</p>
-    <a class="cta" href="price.html" data-ev="cta_click">J'en ai besoin</a>
-    <p class="cta-note">Service en préparation · Aucun paiement n'est accepté sur cette page</p>
-  </div>
+<main class="shell">
+  <section class="split">
+    <div class="stack">
+      <p class="meta rise"><span class="dot"></span> Pour ramoneurs et fumistes</p>
+      <h1 class="rise" style="--i:1" data-len="long">Le certificat de ramonage rempli sur place, signé et envoyé au client <span class="soft">avant de partir</span></h1>
+      <p class="rise" style="--i:2">Pour ramoneurs indépendants et petites entreprises de fumisterie : l'appareil, le conduit, l'état constaté et les observations sont saisis sur le téléphone pendant l'intervention, le client signe à l'écran et reçoit son certificat en PDF par e-mail.</p>
+      <a class="button rise" style="--i:3" href="price.html" data-ev="cta_click">J'en ai besoin</a>
+      <p class="meta rise" style="--i:4">Service en préparation · Aucun paiement n'est accepté sur cette page</p>
+    </div>
+
+    <figure class="window rise" style="--i:2"><svg class="shot" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" font-family="inherit">
+      <rect width="600" height="400" fill="#eef2f7"/>
+      <rect x="48" y="36" width="316" height="328" rx="10" fill="#fff" stroke="#dde2ea"/>
+      <text x="72" y="80" font-size="19" font-weight="600" fill="#0a1524">Certificat de ramonage</text>
+      <path d="M72 98h268" stroke="#dde2ea"/>
+      <g font-size="14" fill="#566174">
+        <text x="72" y="132">Appareil</text>
+        <text x="72" y="168">Conduit</text>
+        <text x="72" y="204">État constaté</text>
+        <text x="72" y="240">Observations</text>
+        <text x="72" y="308">Signature</text>
+      </g>
+      <g fill="#dde2ea">
+        <rect x="200" y="122" width="140" height="10" rx="5"/>
+        <rect x="200" y="158" width="104" height="10" rx="5"/>
+        <rect x="200" y="194" width="124" height="10" rx="5"/>
+        <rect x="200" y="230" width="140" height="10" rx="5"/>
+        <rect x="200" y="250" width="86" height="10" rx="5"/>
+      </g>
+      <path d="M72 276h268" stroke="#dde2ea"/>
+      <path d="M150 312c10-18 18-18 20-2s10 10 18-4 14-8 16 2 12 6 22-4" fill="none" stroke="#12397a" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M146 326h110" stroke="#dde2ea"/>
+      <rect x="284" y="296" width="56" height="30" rx="6" fill="#12397a"/>
+      <text x="312" y="317" font-size="15" font-weight="600" fill="#fff" text-anchor="middle">PDF</text>
+      <rect x="414" y="64" width="146" height="272" rx="22" fill="#fff" stroke="#0a1524" stroke-width="2"/>
+      <rect x="468" y="76" width="38" height="6" rx="3" fill="#dde2ea"/>
+      <g fill="none" stroke="#dde2ea" stroke-width="1.5">
+        <rect x="432" y="104" width="110" height="26" rx="6"/>
+        <rect x="432" y="140" width="110" height="26" rx="6"/>
+        <rect x="432" y="176" width="110" height="26" rx="6"/>
+      </g>
+      <g fill="#566174">
+        <rect x="442" y="114" width="52" height="6" rx="3"/>
+        <rect x="442" y="150" width="40" height="6" rx="3"/>
+        <rect x="442" y="186" width="64" height="6" rx="3"/>
+      </g>
+      <rect x="432" y="214" width="110" height="52" rx="6" fill="#dfe8f7"/>
+      <path d="M446 248c8-14 14-14 16-2s8 8 14-2 12-6 14 2 10 4 18-4" fill="none" stroke="#12397a" stroke-width="2.5" stroke-linecap="round"/>
+      <rect x="432" y="280" width="110" height="34" rx="8" fill="#12397a"/>
+      <path d="M478 297l6 6 12-13" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg></figure>
+    <dl class="facts">
+      <div><dt>Pour</dt><dd>Ramoneurs et fumistes</dd></div>
+      <div><dt>Saisie</dt><dd>Sur le téléphone</dd></div>
+      <div><dt>Envoi</dt><dd>PDF par e-mail</dd></div>
+      <div><dt>Installation</dt><dd>Aucune, dans le navigateur</dd></div>
+    </dl>
+  </section>
 
   <section id="quoi" data-view="features_view">
-    <h2>Ce que vous obtenez</h2>
-    <div class="grid">
-      <div class="card"><b>Certificat sur place</b><span>Rempli pendant l'intervention, sans ressaisie le soir.</span><br><a class="btn" href="price.html" data-ev="feature_certificat">J'en ai besoin</a></div>
-      <div class="card"><b>Mentions prévues</b><span>Les informations demandées par le décret 2023-641.</span><br><a class="btn" href="price.html" data-ev="feature_mentions">J'en ai besoin</a></div>
-      <div class="card"><b>Envoi en PDF</b><span>Signature du client à l'écran et envoi par e-mail.</span><br><a class="btn" href="price.html" data-ev="feature_envoi">J'en ai besoin</a></div>
-      <div class="card"><b>Rappel annuel</b><span>Clients prévenus quand le prochain ramonage approche.</span><br><a class="btn" href="price.html" data-ev="feature_rappel">J'en ai besoin</a></div>
+    <div class="stack"><h2>Ce que vous obtenez</h2></div>
+    <div class="bento">
+      <article class="tile stack wide reveal">
+        <div class="art"><svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+          <rect width="400" height="300" fill="#eef2f7"/>
+          <rect x="136" y="28" width="128" height="244" rx="20" fill="#fff" stroke="#0a1524" stroke-width="3"/>
+          <rect x="182" y="42" width="36" height="6" rx="3" fill="#dde2ea"/>
+          <g fill="none" stroke="#dde2ea" stroke-width="2">
+            <rect x="154" y="70" width="92" height="28" rx="6"/>
+            <rect x="154" y="108" width="92" height="28" rx="6"/>
+            <rect x="154" y="146" width="92" height="28" rx="6"/>
+          </g>
+          <g fill="#566174">
+            <rect x="164" y="81" width="44" height="6" rx="3"/>
+            <rect x="164" y="119" width="58" height="6" rx="3"/>
+            <rect x="164" y="157" width="36" height="6" rx="3"/>
+          </g>
+          <rect x="154" y="190" width="92" height="36" rx="8" fill="#dfe8f7"/>
+          <circle cx="262" cy="232" r="34" fill="#12397a"/>
+          <path d="M246 232l11 11 21-23" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg></div>
+        <h3>Certificat sur place</h3><p>Rempli pendant l'intervention, sans ressaisie le soir.</p>
+        <a class="button quiet" href="price.html" data-ev="feature_certificat">J'en ai besoin</a>
+      </article>
+      <article class="tile stack reveal">
+        <div class="art"><svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+          <rect width="400" height="300" fill="#eef2f7"/>
+          <rect x="84" y="30" width="232" height="240" rx="12" fill="#fff" stroke="#dde2ea" stroke-width="2"/>
+          <g fill="#12397a">
+            <rect x="108" y="56" width="30" height="30" rx="7"/>
+            <rect x="108" y="108" width="30" height="30" rx="7"/>
+            <rect x="108" y="160" width="30" height="30" rx="7"/>
+          </g>
+          <g fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M115 71l6 6 11-12"/>
+            <path d="M115 123l6 6 11-12"/>
+            <path d="M115 175l6 6 11-12"/>
+          </g>
+          <rect x="109.500" y="213.500" width="27" height="27" rx="6" fill="#dfe8f7" stroke="#12397a" stroke-width="3" stroke-dasharray="6 5"/>
+          <g fill="#dde2ea">
+            <rect x="156" y="65" width="132" height="12" rx="6"/>
+            <rect x="156" y="117" width="104" height="12" rx="6"/>
+            <rect x="156" y="169" width="120" height="12" rx="6"/>
+          </g>
+          <rect x="156" y="221" width="92" height="12" rx="6" fill="#dfe8f7" stroke="#12397a" stroke-width="2"/>
+        </svg></div>
+        <h3>Mentions prévues</h3><p>Les informations demandées par le décret 2023-641.</p>
+        <a class="button quiet" href="price.html" data-ev="feature_mentions">J'en ai besoin</a>
+      </article>
+      <article class="tile stack reveal">
+        <div class="art"><svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" font-family="inherit">
+          <rect width="400" height="300" fill="#eef2f7"/>
+          <rect x="40" y="50" width="140" height="200" rx="12" fill="#fff" stroke="#dde2ea" stroke-width="2"/>
+          <g fill="#dde2ea">
+            <rect x="60" y="76" width="100" height="10" rx="5"/>
+            <rect x="60" y="100" width="76" height="10" rx="5"/>
+            <rect x="60" y="124" width="92" height="10" rx="5"/>
+          </g>
+          <rect x="60" y="176" width="100" height="50" rx="8" fill="#12397a"/>
+          <text x="110" y="212" font-size="30" font-weight="600" fill="#fff" text-anchor="middle">PDF</text>
+          <path d="M198 150h46m-16-16 16 16-16 16" fill="none" stroke="#12397a" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+          <rect x="262" y="104" width="104" height="92" rx="10" fill="#fff" stroke="#0a1524" stroke-width="3"/>
+          <path d="M264 110l50 44 50-44" fill="none" stroke="#0a1524" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg></div>
+        <h3>Envoi en PDF</h3><p>Signature du client à l'écran et envoi par e-mail.</p>
+        <a class="button quiet" href="price.html" data-ev="feature_envoi">J'en ai besoin</a>
+      </article>
+      <article class="tile stack wide reveal">
+        <div class="art"><svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+          <rect width="400" height="300" fill="#eef2f7"/>
+          <rect x="80" y="48" width="240" height="212" rx="14" fill="#fff" stroke="#dde2ea" stroke-width="2"/>
+          <path d="M80 62a14 14 0 0 1 14-14h212a14 14 0 0 1 14 14v36H80z" fill="#12397a"/>
+          <path d="M132 34v28m136-28v28" stroke="#0a1524" stroke-width="6" stroke-linecap="round"/>
+          <g fill="#dde2ea">
+            <rect x="104" y="120" width="34" height="26" rx="6"/><rect x="156" y="120" width="34" height="26" rx="6"/><rect x="208" y="120" width="34" height="26" rx="6"/><rect x="260" y="120" width="34" height="26" rx="6"/>
+            <rect x="104" y="164" width="34" height="26" rx="6"/><rect x="156" y="164" width="34" height="26" rx="6"/><rect x="260" y="164" width="34" height="26" rx="6"/>
+            <rect x="104" y="208" width="34" height="26" rx="6"/><rect x="156" y="208" width="34" height="26" rx="6"/><rect x="208" y="208" width="34" height="26" rx="6"/>
+          </g>
+          <rect x="208" y="164" width="34" height="26" rx="6" fill="#dfe8f7" stroke="#12397a" stroke-width="3"/>
+          <circle cx="294" cy="226" r="30" fill="#12397a"/>
+          <path d="M281 236h26c-4-4-4-8-4-14a9 9 0 0 0-18 0c0 6 0 10-4 14zm10 5a3 3 0 0 0 6 0" fill="#fff"/>
+        </svg></div>
+        <h3>Rappel annuel</h3><p>Clients prévenus quand le prochain ramonage approche.</p>
+        <a class="button quiet" href="price.html" data-ev="feature_rappel">J'en ai besoin</a>
+      </article>
     </div>
   </section>
 
-  <section id="exemple" data-view="example_view">
-    <h2>Exemple (données fictives)</h2>
-    <p class="fine">Ramoneur indépendant, six interventions par jour en saison. Chez une cliente avec un poêle à bois, il saisit l'appareil, le conduit, le débistrage et une remarque sur la souche. La cliente signe sur le téléphone, et le certificat arrive dans sa boîte mail avant qu'il range le hérisson. Onze mois plus tard, elle reçoit un rappel.</p>
-    <a class="cta" href="price.html" data-ev="click_cta_after_example">Choisir la formule</a>
+  <section id="exemple" class="split flip" data-view="example_view">
+    <div class="stack">
+      <h2>Exemple (données fictives)</h2>
+      <p>Ramoneur indépendant, six interventions par jour en saison. Chez une cliente avec un poêle à bois, il saisit l'appareil, le conduit, le débistrage et une remarque sur la souche. La cliente signe sur le téléphone, et le certificat arrive dans sa boîte mail avant qu'il range le hérisson. Onze mois plus tard, elle reçoit un rappel.</p>
+      <a class="button" href="price.html" data-ev="click_cta_after_example">Choisir la formule</a>
+    </div>
+    <svg class="shot reveal" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" font-family="inherit">
+      <rect width="600" height="400" fill="#eef2f7"/>
+      <rect x="36" y="84" width="528" height="232" rx="14" fill="#fff" stroke="#dde2ea"/>
+      <path d="M108 176h384" stroke="#dde2ea" stroke-width="3"/>
+      <g fill="#dfe8f7" stroke="#12397a" stroke-width="2">
+        <circle cx="108" cy="176" r="34"/>
+        <circle cx="236" cy="176" r="34"/>
+        <circle cx="364" cy="176" r="34"/>
+      </g>
+      <circle cx="492" cy="176" r="34" fill="#12397a"/>
+      <rect x="97" y="156" width="22" height="40" rx="5" fill="#fff" stroke="#0a1524" stroke-width="2"/>
+      <path d="M103 168h10m-10 8h10" stroke="#566174" stroke-width="2" stroke-linecap="round"/>
+      <path d="M216 182c8-14 14-14 16-2s8 8 13-2 9-6 11 2" fill="none" stroke="#12397a" stroke-width="2.5" stroke-linecap="round"/>
+      <rect x="349" y="156" width="30" height="40" rx="4" fill="#fff" stroke="#0a1524" stroke-width="2"/>
+      <path d="M355 168h18m-18 8h18m-18 8h10" stroke="#566174" stroke-width="2" stroke-linecap="round"/>
+      <path d="M479 186h26c-4-4-4-8-4-14a9 9 0 0 0-18 0c0 6 0 10-4 14zm10 5a3 3 0 0 0 6 0" fill="#fff"/>
+      <g font-size="20" font-weight="500" fill="#0a1524" text-anchor="middle">
+        <text x="108" y="254">Sur place</text>
+        <text x="236" y="254">Signature</text>
+        <text x="364" y="254">PDF</text>
+        <text x="492" y="254">Rappel</text>
+      </g>
+    </svg>
   </section>
 <!-- seo-tekst:start -->
-  <section id="opis">
-    <h2>Comment ça marche</h2>
-    <p>Après chaque ramonage, le professionnel remet au client un certificat de ramonage. Depuis le décret 2023-641, ce certificat doit comporter un ensemble d'informations précises sur l'intervention, l'appareil, le conduit et les éventuelles anomalies constatées. Le client le conserve et le présente à son assureur en cas de sinistre.</p>
-    <p>Beaucoup de ramoneurs remplissent encore ce certificat à la main, sur un carnet à souches, ou le ressaisissent le soir dans un traitement de texte. En saison, avec plusieurs interventions par jour, cela fait des heures de papier, des certificats illisibles et des mentions oubliées.</p>
-    <p>Le logiciel permet de faire le certificat pendant l'intervention. Pour chaque client, vous enregistrez une fois le logement, l'appareil — poêle, insert, chaudière, cheminée ouverte — et le conduit, avec ses caractéristiques. Au passage suivant, tout est déjà là.</p>
-    <p>Sur place, vous indiquez la date, la méthode de ramonage, l'état du conduit, le débistrage éventuel et vos observations. Le logiciel vous guide pour que toutes les mentions prévues soient présentes, et signale celles qui manquent avant que le certificat soit établi.</p>
-    <p>Si vous constatez une anomalie — conduit dégradé, tubage à vérifier, souche abîmée —, vous l'ajoutez avec une photo. Elle apparaît clairement sur le certificat, et le client sait ce qu'il doit faire réparer.</p>
-    <p>Le client signe sur votre téléphone, et le certificat part en PDF par e-mail, à votre nom et avec vos coordonnées professionnelles. Une copie reste dans votre historique, classée par client et par adresse.</p>
-    <p>Si le client le souhaite, la facture de l'intervention est établie au même moment, à partir des mêmes informations, sans rien ressaisir.</p>
-    <p>Chaque certificat reste consultable. Si un client a perdu le sien ou si un assureur demande une copie, vous le retrouvez en quelques secondes et le renvoyez.</p>
-    <p>Le logiciel connaît la date du dernier ramonage de chaque appareil. Quand le prochain approche, le client reçoit un rappel, et vous voyez la liste des clients à recontacter pour remplir votre planning avant la saison de chauffe.</p>
-    <p>Pour les propriétaires bailleurs, les syndics ou les collectivités qui ont plusieurs logements, vous retrouvez tous les certificats d'une même adresse ou d'un même donneur d'ordre, et pouvez les leur envoyer en une fois.</p>
-    <p>La prise en main demande une soirée : vos coordonnées, vos tarifs et vos clients habituels. Le logiciel fonctionne dans le navigateur du téléphone, de la tablette ou de l'ordinateur, sans installation.</p>
-    <p>Le logiciel est conçu pour les ramoneurs et fumistes en France. Il est en préparation : nous vérifions d'abord si les professionnels en ont besoin. Le ramoneur reste responsable du contenu du certificat et de l'intervention.</p>
+  <section id="opis" class="split flip">
+    <div class="stack"><h2>Comment ça marche</h2></div>
+    <div class="stack">
+      <p>Après chaque ramonage, le professionnel remet au client un certificat de ramonage. Depuis le décret 2023-641, ce certificat doit comporter un ensemble d'informations précises sur l'intervention, l'appareil, le conduit et les éventuelles anomalies constatées. Le client le conserve et le présente à son assureur en cas de sinistre.</p>
+      <p>Beaucoup de ramoneurs remplissent encore ce certificat à la main, sur un carnet à souches, ou le ressaisissent le soir dans un traitement de texte. En saison, avec plusieurs interventions par jour, cela fait des heures de papier, des certificats illisibles et des mentions oubliées.</p>
+      <p>Le logiciel permet de faire le certificat pendant l'intervention. Pour chaque client, vous enregistrez une fois le logement, l'appareil — poêle, insert, chaudière, cheminée ouverte — et le conduit, avec ses caractéristiques. Au passage suivant, tout est déjà là.</p>
+      <p>Sur place, vous indiquez la date, la méthode de ramonage, l'état du conduit, le débistrage éventuel et vos observations. Le logiciel vous guide pour que toutes les mentions prévues soient présentes, et signale celles qui manquent avant que le certificat soit établi.</p>
+      <p>Si vous constatez une anomalie — conduit dégradé, tubage à vérifier, souche abîmée —, vous l'ajoutez avec une photo. Elle apparaît clairement sur le certificat, et le client sait ce qu'il doit faire réparer.</p>
+      <p>Le client signe sur votre téléphone, et le certificat part en PDF par e-mail, à votre nom et avec vos coordonnées professionnelles. Une copie reste dans votre historique, classée par client et par adresse.</p>
+      <p>Si le client le souhaite, la facture de l'intervention est établie au même moment, à partir des mêmes informations, sans rien ressaisir.</p>
+      <p>Chaque certificat reste consultable. Si un client a perdu le sien ou si un assureur demande une copie, vous le retrouvez en quelques secondes et le renvoyez.</p>
+      <p>Le logiciel connaît la date du dernier ramonage de chaque appareil. Quand le prochain approche, le client reçoit un rappel, et vous voyez la liste des clients à recontacter pour remplir votre planning avant la saison de chauffe.</p>
+      <p>Pour les propriétaires bailleurs, les syndics ou les collectivités qui ont plusieurs logements, vous retrouvez tous les certificats d'une même adresse ou d'un même donneur d'ordre, et pouvez les leur envoyer en une fois.</p>
+      <p>La prise en main demande une soirée : vos coordonnées, vos tarifs et vos clients habituels. Le logiciel fonctionne dans le navigateur du téléphone, de la tablette ou de l'ordinateur, sans installation.</p>
+      <p>Le logiciel est conçu pour les ramoneurs et fumistes en France. Il est en préparation : nous vérifions d'abord si les professionnels en ont besoin. Le ramoneur reste responsable du contenu du certificat et de l'intervention.</p>
+    </div>
   </section>
   <section id="faq">
-    <h2>Questions fréquentes</h2>
-    <h3>Le certificat comporte-t-il les mentions du décret 2023-641 ?</h3>
-    <p>Le logiciel vous guide pour saisir toutes les informations prévues et signale celles qui manquent.</p>
-    <h3>Comment le client reçoit-il le certificat ?</h3>
-    <p>Il signe sur votre téléphone et le reçoit en PDF par e-mail.</p>
-    <h3>Puis-je retrouver un ancien certificat ?</h3>
-    <p>Oui, tous les certificats sont classés par client et par adresse.</p>
-    <h3>Faut-il installer quelque chose ?</h3>
-    <p>Non, le logiciel fonctionne dans le navigateur du téléphone, de la tablette ou de l'ordinateur.</p>
-    <h3>Puis-je déjà l'utiliser ?</h3>
-    <p>Pas encore. Le logiciel est en préparation, et nous vérifions si les professionnels en ont besoin.</p>
+    <div class="stack"><h2>Questions fréquentes</h2></div>
+    <div class="rows">
+      <div class="split flip"><h3>Le certificat comporte-t-il les mentions du décret 2023-641 ?</h3><p>Le logiciel vous guide pour saisir toutes les informations prévues et signale celles qui manquent.</p></div>
+      <div class="split flip"><h3>Comment le client reçoit-il le certificat ?</h3><p>Il signe sur votre téléphone et le reçoit en PDF par e-mail.</p></div>
+      <div class="split flip"><h3>Puis-je retrouver un ancien certificat ?</h3><p>Oui, tous les certificats sont classés par client et par adresse.</p></div>
+      <div class="split flip"><h3>Faut-il installer quelque chose ?</h3><p>Non, le logiciel fonctionne dans le navigateur du téléphone, de la tablette ou de l'ordinateur.</p></div>
+      <div class="split flip"><h3>Puis-je déjà l'utiliser ?</h3><p>Pas encore. Le logiciel est en préparation, et nous vérifions si les professionnels en ont besoin.</p></div>
+    </div>
   </section>
 <!-- seo-tekst:end -->
-  <section id="start" data-view="start_view">
-    <h2>Ajoutez votre entreprise</h2>
-    <p><label>Ramonages par an<br><select data-ev-focus="form_start" style="margin-top:6px;padding:8px;font-size:16px"><option value="">— choisissez —</option><option>Moins de 300</option><option>300–800</option><option>800–1500</option><option>Plus de 1500</option></select></label></p>
-    <a class="cta" href="price.html" data-ev="form_submit_click">Commencer</a>
+  <section id="start" class="split" data-view="start_view">
+    <div class="stack">
+      <h2>Ajoutez votre entreprise</h2>
+    </div>
+    <div class="tile stack">
+      <label>Ramonages par an<select data-ev-focus="form_start"><option value="">— choisissez —</option><option>Moins de 300</option><option>300–800</option><option>800–1500</option><option>Plus de 1500</option></select></label>
+      <a class="button" href="price.html" data-ev="form_submit_click">Commencer</a>
+    </div>
   </section>
-</div>
+</main>
 
-<footer><div class="wrap">
+<footer><div class="shell">
+  <p><b>Certificat Ramonage</b></p>
   <p><a href="privacy.html" data-ev="click_legal_privacy">Confidentialité</a></p>
-  <p class="muted">Logiciel pour vos certificats de ramonage. Le ramoneur reste responsable du contenu du certificat et de l'intervention.</p>
+  <p>Logiciel pour vos certificats de ramonage. Le ramoneur reste responsable du contenu du certificat et de l'intervention.</p>
 </div></footer>
 
 </body>
